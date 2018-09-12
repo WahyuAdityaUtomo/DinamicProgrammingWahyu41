@@ -5,6 +5,7 @@
  */
 package dynamicprogramming;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -26,6 +27,7 @@ public class DynamicProgramming {
         String identitas = "Wahyu Aditya Utomo / XRPL5 / 41";
         tampiljudul(identitas);
         int n = tampilinput();
+        BigInteger hasil = fibo(n);
        
     }
     private static int tampilinput(){
@@ -37,6 +39,18 @@ public class DynamicProgramming {
         return n;
         
     }
-    
-}
+    private static BigInteger fibo(int n){
+        
+        BigInteger[] hasil = new BigInteger[n];
+        
+        hasil[0] = BigInteger.ONE;
+        hasil[1] = BigInteger.ONE;
+        
+        for (int i = 2 ; 1 < n ; i++){
+            hasil[i] = hasil[i-1].add(hasil[1-2]);
+    }
+        return hasil[n-1];
+    }
+    }
+
 
