@@ -5,6 +5,8 @@
  */
 package dynamicprogramming;
 
+import java.util.Scanner;
+
 /**
  *
  * @author User
@@ -23,6 +25,18 @@ public class DynamicProgramming {
     public static void main(String[] args) {
         String identitas = "Wahyu Aditya Utomo / XRPL5 / 41";
         tampiljudul(identitas);
+        int n = tampilinput();
+       
+    }
+    private static int tampilinput(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Bilangan ke-: ");
+         int n = scanner.nextInt();
+        
+        return n;
+        
     }
     
 }
+
